@@ -5,6 +5,11 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
 }
 
 /**************** COLORS *******************/
@@ -26,10 +31,6 @@ body{
     color: var(--text-color);
 }
 
-a{
-    text-decoration: none;
-}
-
 header{
     position: fixed;
     top: 0;
@@ -45,7 +46,7 @@ header{
 }
 
 .logo{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
@@ -61,7 +62,7 @@ header{
 }
 
 .navbar a{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 500;
@@ -76,12 +77,12 @@ header{
 }
 
 #menu-icon{
-    font-size: 3.6rem;
+    font-size: 3.5rem;
     color: var(--main-color);
     display: none;
 }
 
-section{
+#home{
     max-height: 100vh;
     padding: 10rem 12% 10rem;
 }
@@ -113,11 +114,11 @@ span{
 .home-content h3{
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .home-content h1{
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-top: 1.7rem;
     line-height: 1;
@@ -146,7 +147,7 @@ span{
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -311,18 +312,18 @@ span{
 /*********************** EDUCATION *******************************/
 
 .heading{
-    font-size: 8rem;
+    font-size: 6rem;
     text-align: center;
     margin: 5rem 0;
 }
 
 .education{
-    padding: 100px 15px;
-    background: var(--second-big-color);
+    padding: 65px 15px;
+    background-color: var(--second-big-color);
 }
 
 .education h2{
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .timeline-items{
@@ -396,7 +397,7 @@ span{
 }
 
 .timeline-content h3{
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     margin: 0 0 10px;
     font-weight: 500;
@@ -404,7 +405,7 @@ span{
 
 .timeline-content p{
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 22px;
 }
@@ -422,3 +423,72 @@ span{
     width: 50px;
 }
 
+/********************* Services **************************/
+
+#services{
+    max-height: 100vh;
+    padding: 7.5rem 12% 10rem;
+}
+
+.services{
+    background: var(--big-color);
+    color: #000;
+}
+
+.services h2{
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-box{
+    background-color: var(--main-color);
+    height: 200px;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.service-box:hover{
+    background-color: #fff;
+    color: #000;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    padding: 2rem;
+}
+
+.service-info h4{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
+.service-info p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin: auto;
+}
+
+/******************** PROJECTS ************************/
+
+#projects{
+    padding: 7.5rem 12% 10rem;
+}
