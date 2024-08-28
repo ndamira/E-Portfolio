@@ -163,6 +163,8 @@ span{
     box-shadow: 0 0 25px var(--main-color);
 }
 
+
+
 /* #home{
     max-height: 100vh;
     padding: 10rem 12% 10rem;
@@ -260,7 +262,7 @@ span{
 
 /**************** HIRE ME AND CONTACT ME BUTTONS *********************/
 
-/* .home-content .btnGroup{
+.home-content .btnGroup{
     display: flex;
     padding: 20px 0;
 }
@@ -270,9 +272,8 @@ span{
 }
 
 .home-content .btnGroup .btn1 button{
-    box-shadow: 0 0 25px var(--main-color);
     margin-right: 20px;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 30px;
     border: none;
     outline: none;
@@ -308,7 +309,7 @@ span{
     background: var(--main-color);
     color: var(--big-color);
     box-shadow: 0 0 50px var(--main-color);
-} */
+} 
 
 /************ TEXT ANIMATION *******************/
 
@@ -787,9 +788,23 @@ form .btn3{
         margin: 3rem 0;
         color: var(--text-color);
     }
-    .home{
+    #home{
+        width: 100%;
+        height: 200vh;
+    }
+    /* .home{
         flex-direction: column-reverse;
-        margin: 5rem 4rem;
+        margin: 4rem 4rem;
+    } */
+    .home .home-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 5rem;
+    }
+    .home .home-content .left{
+        width: 100%;
+        margin: auto;
     }
     .home-content h3{
         font-size: 2.6rem;
@@ -804,10 +819,10 @@ form .btn3{
         margin: 0 auto;
     }
 
-    .home-img img{
-        margin-top: 35rem;
-        background: #f00;
+    .text-animation{
+        min-width: 400px;
     }
+    
 
     .services h2{
         margin-bottom: 3rem;
