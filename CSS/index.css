@@ -740,6 +740,11 @@ form .btn3{
 }
 
 @media(max-width:480px){
+    #home{
+        width: 100%;
+        height: 135vh;
+    }
+
     .home .home-content{
         padding: 0 10px;
     }
@@ -750,6 +755,11 @@ form .btn3{
     
     .home .home-content .left h1{
         font-size: 4rem;
+    }
+
+    .home .home-content .home-img img{
+        width: 310px;
+        height: 310px;
     }
 
     .timeline-content h3{
