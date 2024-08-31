@@ -11,15 +11,20 @@
 <body>
     <!-- ----------------------- HERO SECTION -------------------------------- -->
     <header class="header">
-        <a href="#home" class="logo" > Regis <span>NDAMIRA</span> </a>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#education">Education</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact Me</a>
-        </nav>
+        <div class="container">
+            <nav>
+                <h1 class="logo">Regis <span>NDAMIRA</span> </h1>
+                <ul id="submenu">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#education">Education</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact Me</a>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+        </div>
     </header>
     <section class="home" id="home">
         <div class="home-content">
@@ -35,11 +40,8 @@
                     <a href="https://x.com/RegisNdamira"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
                 <div class="btnGroup">
-                    <a href="#" class="btn1">
-                        <button>Hire Me</button>
-                    </a>
                     <a href="#" class="btn2">
-                        <button>Contact Me</button>
+                        <button><a href="#contact">Hire Me</a></button>
                     </a>
                 </div>
             </div>
@@ -186,12 +188,13 @@
                     <a href="../IMG/Curriculum Vitae -- Regis NDAMIRA.docx.pdf" download class="btn btn3">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="name" placeholder="Your Full Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Full Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn3" >Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>

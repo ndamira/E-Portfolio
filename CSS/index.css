@@ -32,18 +32,15 @@ body{
 
 /******************************** NAVBAR **********************************/
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 4rem 12% 2rem;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+header .container{
+    padding: 30px 10%;
+}
+
+nav{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 5;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -58,11 +55,8 @@ header{
     transform: scale(1.1);
 }
 
-.logo span{
-    color: var(--main-color);
-}
-
-.navbar a{
+nav ul a{
+    position: relative;
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -71,16 +65,29 @@ header{
     border-bottom: 3px solid transparent;
 }
 
-.navbar a:hover,
-.navbar a.active{
+nav ul a:hover{
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
 }
 
-#menu-icon{
-    font-size: 3.5rem;
-    color: var(--main-color);
+nav ul a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00ffee;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+nav .fa-solid{
+    font-size: 20px;
     display: none;
+    cursor: pointer;
 }
 
 /******************************************** HERO SECTION ********************************/
@@ -94,10 +101,11 @@ header{
 .home .home-content{
     width: 100%;
     height: 100vh;
-    padding: 10rem 10rem 0;
     display: flex;
+    padding: 0 10rem;
     justify-content: space-between;
     align-items: center;
+    margin-top: -3.2rem;
 }
 
 .home .home-content .left{
@@ -164,66 +172,6 @@ span{
     box-shadow: 0 0 25px var(--main-color);
 }
 
-/* #home{
-    max-height: 100vh;
-    padding: 10rem 12% 10rem;
-}
-
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
-}
-
-.home-content{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    justify-content: center;
-    margin-top: 7rem;
-}
-
-span{
-    color: var(--main-color);
-}
-
-.logo span{
-    color: var(--main-color);
-}
-
-.home-content h3{
-    margin-bottom: 2.3rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-}
-
-.home-content h1{
-    font-size: 4.6rem;
-    font-weight: 700;
-    margin-top: 1.7rem;
-    line-height: 1;
-}
-
-.home-img{
-    border-radius: 50%;
-}
-
-.home-img img{
-    position: relative;
-    top: 4rem;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-}
-
-
- */
-
 /**************** HIRE ME AND CONTACT ME BUTTONS *********************/
 
 .home-content .btnGroup{
@@ -233,25 +181,6 @@ span{
 
 .home-content .btnGroup a{
     text-decoration: none;
-}
-
-.home-content .btnGroup .btn1 button{
-    margin-right: 20px;
-    padding: 12px 15px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background: var(--main-color);
-    color: var(--big-color);
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
-}
-
-.home-content .btnGroup .btn1 button:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
 }
 
 .home-content .btnGroup .btn2 button{
@@ -360,11 +289,10 @@ span{
 .heading{
     font-size: 6rem;
     text-align: center;
-    margin: 5rem 0;
 }
 
 .education{
-    padding: 65px 15px;
+    padding: 10px 0 5rem;
     background-color: var(--second-big-color);
 }
 
@@ -472,7 +400,7 @@ span{
 /********************* Services **************************/
 
 #services{
-    padding: 7.5rem 12% 10rem;
+    padding: 10px 12% 2rem;
 }
 
 .services{
@@ -535,7 +463,7 @@ span{
 /******************** PROJECTS ************************/
 
 .projects{
-    padding: 65px 15px;
+    padding:20px;
     background-color: var(--second-big-color);
 }
 
@@ -546,11 +474,11 @@ span{
 /******************** CONTACT ME ************************/
 
 #contact{
-    padding: 7.5rem 10% 10rem;
+    padding: 1rem 10% 5rem;
 }
 
 .sub-title{
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 600;
     color: #fff;
     margin-top: 5rem;
@@ -572,7 +500,7 @@ span{
 
 .contact-left p{
     margin-top: 30px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .contact-left .last{
@@ -582,7 +510,7 @@ span{
 .contact-left p i{
     color: var(--main-color);
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .btn{
@@ -592,7 +520,7 @@ span{
     border: 1px solid var(--main-color);
     padding: 14px 50px;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     transition: background 0.5s;
 }
@@ -621,15 +549,22 @@ form input, form textarea{
     padding: 15px;
     margin: 15px 0;
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 6px;
 }
 
 form .btn3{
     padding: 14px 60px;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+#msg{
+    color: #61b752;
+    display: block;
+    margin-top: -40px;
+    font-size: 2rem;
 }
 
 /**************************** FOOTER **********************/
@@ -702,35 +637,54 @@ form .btn3{
     }
 }
 
-@media(max-width:895px){
-    #menu-icon{
+@media(max-width:950px){
+    nav .fa-solid{
         display: block;
     }
 
-    .navbar{
+    nav ul{
+        background: var(--main-color);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        color: #000;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul a:hover{
+        color: #000;
+    }
+
+    nav ul a::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #000;
         position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s;
+    }
+    
+    nav ul a:hover::after{
+        width: 100%;
     }
 
-    .navbar.active{
+    nav ul a{
+        color: #000;
         display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
         cursor: pointer;
-    }
-
-    .navbar a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: var(--text-color);
     }
 
     #home{

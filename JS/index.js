@@ -1,25 +1,29 @@
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".nvabar");
-let sections = document.querySelector("section");
-let navLinks = document.querySelector("header nav a");
+// CONTACT ME FORM
 
-window.onscroll = () => {
-    sections.forEach(sec =>{
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyuuj1zzT8haw17gRs-bkZy9AH_yWLCC8ELzs1KFppBaY8yZ_TdIhYjsS4tTyfgx9WgBw/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById('msg')
 
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector(' header nav a[ href*=' + id + ' ] ').classList.add('active')
-            })
-        }
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout( function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
     })
+      .catch(error => console.error('Error!', error.message))
+})
+
+
+var submenu = document.getElementById("submenu");
+
+function openMenu(){
+    submenu.style.right = "0";
 }
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+function closeMenu(){
+    submenu.style.right = "-200px";
 }
