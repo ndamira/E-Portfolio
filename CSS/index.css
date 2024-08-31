@@ -739,4 +739,35 @@ form .btn3{
 
 }
 
+@media(max-width:480px){
+    .home .home-content{
+        padding: 0 10px;
+    }
+
+    .home .home-content .left h3{
+        font-size: 2rem;
+    }
+    
+    .home .home-content .left h1{
+        font-size: 4rem;
+    }
+
+    .timeline-content h3{
+        font-size: 16px;
+    }
+
+    .timeline-content p{
+        font-size: 13px;
+    }
+
+    .service-info h4{
+        font-size: 2rem;
+    }
+
+    .service-info p{
+        font-size: 1.4rem;
+    }
+
+}
+
 
