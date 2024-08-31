@@ -94,7 +94,7 @@ header{
 .home .home-content{
     width: 100%;
     height: 100vh;
-    padding: 10rem 20rem 2rem 7rem;
+    padding: 10rem 10rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,6 +122,7 @@ span{
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    margin: 15px 0;
 }
 
 .home .home-content .home-img img{
@@ -162,8 +163,6 @@ span{
     background-color: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
 }
-
-
 
 /* #home{
     max-height: 100vh;
@@ -223,42 +222,7 @@ span{
 }
 
 
-.home-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
-}
-
-.home-content p{
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 1000px;
-}
-
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    font-size: 2.5rem;
-    border-radius: 50%;
-    color: var(--main-color);
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-.social-icons a:hover{
-    color: var(--text-color);
-    transform: scale(1.3) translateY(-5px);
-    background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
-} */
+ */
 
 /**************** HIRE ME AND CONTACT ME BUTTONS *********************/
 
@@ -678,40 +642,6 @@ form .btn3{
     background: var(--second-big-color);
 }
 
-/*.footer ul{
-    margin-top: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.footer ul li a{
-    color: var(--text-color);
-    position: relative;
-}
-
-.footer ul li a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 3px;
-    bottom: -3px;
-    background-color: var(--main-color);
-    transition: 0.5s;
-}
-
-.footer ul li a:hover::after{
-    width: 100%;
-}
-
-.footer ul li{
-    display: inline-block;
-    padding: 0 15px;
-} */
-
 .footer .copyright{
     margin-top: 10px;
     text-align: center;
@@ -738,7 +668,7 @@ form .btn3{
         padding: 2rem 3%;
     }
     section{
-        padding: 10rem 3% 2rem;
+        padding: 2rem 2% 2rem;
     }
     .timeline-items::before{
         left: 7px;
@@ -754,9 +684,19 @@ form .btn3{
     .timeline-dot{
         left: 0;
     }
-    .services{
-        padding-bottom: 7rem;
+
+    #services{
+        padding: 7.5rem 0 10rem;
     }
+
+    .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    .row{
+        flex-direction: column;
+    }
+
     .footer{
         padding: 2rem 3%;
     }
@@ -766,6 +706,7 @@ form .btn3{
     #menu-icon{
         display: block;
     }
+
     .navbar{
         position: absolute;
         top: 100%;
@@ -779,36 +720,43 @@ form .btn3{
         border-bottom: 2px solid var(--main-color);
         display: none;
     }
+
     .navbar.active{
         display: block;
+        cursor: pointer;
     }
+
     .navbar a{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
         color: var(--text-color);
     }
+
     #home{
         width: 100%;
-        height: 200vh;
+        height: 150vh;
     }
-    /* .home{
-        flex-direction: column-reverse;
-        margin: 4rem 4rem;
-    } */
+
     .home .home-content{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         margin-top: 5rem;
     }
+
     .home .home-content .left{
         width: 100%;
-        margin: auto;
     }
+
+    .home .home-content .home-img{
+        margin-top: 14rem;
+    }
+
     .home-content h3{
         font-size: 2.6rem;
     }
+
     .home-content h1{
         font-size: 8rem;
         margin-top: 3rem;
@@ -823,7 +771,6 @@ form .btn3{
         min-width: 400px;
     }
     
-
     .services h2{
         margin-bottom: 3rem;
     }
@@ -831,6 +778,7 @@ form .btn3{
     .services-container{
         grid-template-columns: repeat(1,1fr);
     }
+
     .row{
         flex-direction: column;
     }
